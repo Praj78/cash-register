@@ -19,7 +19,7 @@ changeToBeReturned(amountToBeReturned);
 });
 function changeToBeReturned(amountToBeReturned){
     for(let i=0;i<availableNotes.length;i++){
-        const change=Math.trunc(amountToBeReturned/availableNotes[i]);
+        const change=Math.trunc(amountToBeReturned%availableNotes[i]);
         amountToBeReturned%=availableNotes[i]
         noOfNotes[i].innerText=change;
     }
